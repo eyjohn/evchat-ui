@@ -1,19 +1,18 @@
 import React from "react";
-import styled from "styled-components";
+import { ThemeProvider } from "styled-components";
+import { DarkTheme } from "./Theme";
+import GlobalStyle from "./GlobalStyle";
+import Container from "./components/Container";
 
-const Container = styled.div`
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-`;
-
-function App() {
+const App: React.FC = () => {
   return (
-    <Container>
-      <div>Hello World</div>
-    </Container>
+    <ThemeProvider theme={DarkTheme}>
+      <GlobalStyle />
+      <Container>
+        <div>Hello World</div>
+      </Container>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
