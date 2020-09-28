@@ -8,9 +8,7 @@ const App: React.FC = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
       <GlobalStyle />
-      <Container>
-        <div>Hello World</div>
-      </Container>
+      <Container />
     </ThemeProvider>
   );
 };

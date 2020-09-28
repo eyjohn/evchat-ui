@@ -1,15 +1,24 @@
 export interface Theme {
-  backgroundColor: string;
-  color: string;
+  colors: {
+    background: string;
+    backgroundAlt: string;
+    foreground: string;
+  };
 }
 
 export const LightTheme: Theme = {
-  backgroundColor: "#FFF",
-  color: "#000",
+  colors: {
+    background: "#FFF",
+    backgroundAlt: "#EEE",
+    foreground: "#000",
+  }
+
 };
 
 export const DarkTheme: Theme = {
-  ...LightTheme,
-  backgroundColor: "#282828",
-  color: "#FFF",
+  colors: {
+    background: "#222222",
+    backgroundAlt: "#333333",
+    foreground: "#FFF",
+  }
 };
