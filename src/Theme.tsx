@@ -4,6 +4,8 @@ export interface Theme {
     backgroundSidePanel: string;
     backgroundHorizontalPanel: string;
     foreground: string;
+    link: string;
+    linkActive: string;
   };
 }
 
@@ -11,16 +13,20 @@ export const LightTheme: Theme = {
   colors: {
     background: "#FFF",
     backgroundSidePanel: "#EEE",
-    backgroundHorizontalPanel: "#CCC",
+    backgroundHorizontalPanel: "#DDD",
     foreground: "#000",
+    link: "#666",
+    linkActive: "#444",
   },
 };
 
 export const DarkTheme: Theme = {
   colors: {
-    background: "#333333",
-    backgroundSidePanel: "#444444",
-    backgroundHorizontalPanel: "#222222",
+    background: "#333",
+    backgroundSidePanel: "#444",
+    backgroundHorizontalPanel: "#222",
     foreground: "#FFF",
+    link: "#BBB",
+    linkActive: "#DDD",
   },
 };

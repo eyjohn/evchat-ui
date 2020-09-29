@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const Styled = styled.main`
+const Styled = styled.div`
+  padding: 10px;
   flex: 1;
 `;
 

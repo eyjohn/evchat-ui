@@ -1,11 +1,35 @@
 import React from "react";
 import styled from "styled-components";
 
-const Styled = styled.footer`
-  background-color: ${(props) => props.theme.colors.backgroundHorizontalPanel};
+import { GoMarkGithub } from "react-icons/go";
+
+const Footer = styled.footer`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  background-color: ${({ theme }) => theme.colors.backgroundHorizontalPanel};
+`;
+
+const Section = styled.div`
+  padding: 10px;
 `;
 
 const Component: React.FC = (props) => {
-  return <Styled>Footer</Styled>;
+  return (
+    <Footer>
+      <Section>
+        Created and maintaintained by{" "}
+        <a href="https://evdev.me">Evgeny Yakimov</a>
+      </Section>
+      <Section>
+        View project source on{" "}
+        <a href="https://github.com/eyjohn/evchat-ui">
+          GitHub <GoMarkGithub />
+        </a>
+      </Section>
+    </Footer>
+  );
 };
 export default Component;

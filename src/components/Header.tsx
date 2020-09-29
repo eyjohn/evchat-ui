@@ -4,7 +4,7 @@ import styled from "styled-components";
 import logo from "../assets/logo.svg";
 
 const Styled = styled.header`
-  background-color: ${(props) => props.theme.colors.backgroundHorizontalPanel};
+  background-color: ${({ theme }) => theme.colors.backgroundHorizontalPanel};
 `;
 const Logo = styled.img`
   width: 2em;
