@@ -3,11 +3,10 @@ import React, { useContext } from "react";
 import { IoMdSunny, IoMdMoon } from "react-icons/io";
 import { ThemeContext } from "../DynamicNamedThemeProvider";
 
-const Component: React.FC = (props) => {
+const Component: React.FC = () => {
   const context = useContext(ThemeContext);
   function onClick(event: any) {
     context.setThemeByName(context.themeName === "light" ? "dark" : "light");
-    event.stopPropagation();
   }
 
   const button =
