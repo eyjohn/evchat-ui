@@ -1,15 +1,14 @@
 import React from "react";
-import { ThemeProvider } from "styled-components";
-import { DarkTheme, LightTheme } from "./Theme";
+import DynamicNamedThemeProvider from "./DynamicNamedThemeProvider";
 import GlobalStyle from "./GlobalStyle";
-import Layout from "./Layout";
+import Layout from "./components/Layout";
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={DarkTheme}>
+    <DynamicNamedThemeProvider>
       <GlobalStyle />
       <Layout />
-    </ThemeProvider>
+    </DynamicNamedThemeProvider>
   );
 };
 

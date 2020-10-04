@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Messages from "./components/Messages";
-import MessageInput from "./components/MessageInput";
-import Participants from "./components/Participants";
-import Channels from "./components/Channels";
+import Header from "./Header";
+import Footer from "./Footer";
+import Messages from "./Messages";
+import MessageInput from "./MessageInput";
+import Participants from "./Participants";
+import Channels from "./Channels";
 
 const OuterContainer = styled.div`
   display: flex;

@@ -21,5 +21,4 @@ a:hover {
   color: ${({ theme }) => theme.colors.linkActive};
   text-decoration: underline;
 }
-
 `;

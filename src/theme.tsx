@@ -30,3 +30,8 @@ export const DarkTheme: Theme = {
     linkActive: "#DDD",
   },
 };
+
+export const ThemeMap: Map<string, Theme> = new Map([
+  ["dark", DarkTheme],
+  ["light", LightTheme],
+]);
