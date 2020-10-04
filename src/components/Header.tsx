@@ -13,14 +13,14 @@ const Styled = styled.header`
 `;
 const Logo = styled.img`
   width: 2em;
+  vertical-align: middle;
 `;
 
 const Component: React.FC = (props) => {
   return (
     <Styled>
       <div>
-        <Logo src={logo} alt="EvChat Logo" />
-        Header
+        <Logo src={logo} alt="EvChat Logo" /> Header
       </div>
       <ThemeToggle />
     </Styled>
