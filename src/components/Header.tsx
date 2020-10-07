@@ -8,8 +8,9 @@ const Styled = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 240px;
+  padding: 0px;
   background-color: ${({ theme }) => theme.colors.backgroundHorizontalPanel};
+  flex: 0 0 40px;
 `;
 const Logo = styled.img`
   width: 2em;

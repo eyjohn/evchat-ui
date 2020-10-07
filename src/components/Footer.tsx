@@ -4,12 +4,16 @@ import styled from "styled-components";
 import { GoMarkGithub } from "react-icons/go";
 
 const Footer = styled.footer`
+  background-color: ${({ theme }) => theme.colors.backgroundHorizontalPanel};
+  flex: 0 0 40px;
+`;
+
+const Inner = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   padding: 10px;
-  background-color: ${({ theme }) => theme.colors.backgroundHorizontalPanel};
 `;
 
 const Section = styled.div`
@@ -19,16 +23,18 @@ const Section = styled.div`
 const Component: React.FC = (props) => {
   return (
     <Footer>
-      <Section>
-        Created and maintaintained by{" "}
-        <a href="https://evdev.me">Evgeny Yakimov</a>
-      </Section>
-      <Section>
-        View project source on{" "}
-        <a href="https://github.com/eyjohn/evchat-ui">
-          GitHub <GoMarkGithub />
-        </a>
-      </Section>
+      <Inner>
+        <Section>
+          Created and maintaintained by{" "}
+          <a href="https://evdev.me">Evgeny Yakimov</a>
+        </Section>
+        <Section>
+          View project source on{" "}
+          <a href="https://github.com/eyjohn/evchat-ui">
+            GitHub <GoMarkGithub />
+          </a>
+        </Section>
+      </Inner>
     </Footer>
   );
 };
