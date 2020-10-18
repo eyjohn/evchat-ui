@@ -7,8 +7,8 @@ const Footer = styled.footer`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  flex: 0 0 40px;
   justify-content: center;
-  padding: 10px;
   background-color: ${({ theme }) => theme.colors.backgroundHorizontalPanel};
 `;
 
