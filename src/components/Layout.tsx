@@ -12,6 +12,7 @@ const OuterContainer = styled.div`
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  min-width: 880px;
 `;
 
 const InnerContainer = styled.div`
@@ -27,7 +28,7 @@ const Aside = styled.aside`
 const Main = styled.main`
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1 0 400px;
 `;
 
 const Layout: React.FC = () => {
