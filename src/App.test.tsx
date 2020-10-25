@@ -7,3 +7,7 @@ test("renders the footer", () => {
   const evgeny = getByText(/Evgeny Yakimov/i);
   expect(evgeny).toBeInTheDocument();
 });
+
+test("fail", () => {
+  expect(true).toEqual(false);
+});
