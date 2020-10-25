@@ -1,13 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import Header from "./Header";
-import Footer from "./Footer";
-import Messages from "./Messages";
-import MessageInput from "./MessageInput";
-import Participants from "./Participants";
-import Channels from "./Channels";
-
 const OuterContainer = styled.div`
   display: flex;
   min-height: 100vh;
@@ -31,23 +24,35 @@ const Main = styled.main`
   flex: 1 0 400px;
 `;
 
-const Layout: React.FC = () => {
+export type Props = {
+  header: any;
+  channels: any;
+  messages: any;
+  messageInput: any;
+  participants: any;
+  footer: any;
+};
+
+const Layout: React.FC<Props> = ({
+  header,
+  channels,
+  messages,
+  messageInput,
+  participants,
+  footer,
+}) => {
   return (
     <OuterContainer>
-      <Header />
+      {header}
       <InnerContainer>
-        <Aside>
-          <Channels />
-        </Aside>
+        <Aside>{channels}</Aside>
         <Main>
-          <Messages />
-          <MessageInput />
+          {messages}
+          {messageInput}
         </Main>
-        <Aside>
-          <Participants />
-        </Aside>
+        <Aside>{participants}</Aside>
       </InnerContainer>
-      <Footer />
+      {footer}
     </OuterContainer>
   );
 };

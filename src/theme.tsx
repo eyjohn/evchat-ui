@@ -3,6 +3,7 @@ export interface Theme {
     background: string;
     backgroundSidePanel: string;
     backgroundHorizontalPanel: string;
+    backgroundHighlight: string;
     foreground: string;
     link: string;
     linkActive: string;
@@ -14,6 +15,7 @@ export const LightTheme: Theme = {
     background: "#FFF",
     backgroundSidePanel: "#EEE",
     backgroundHorizontalPanel: "#DDD",
+    backgroundHighlight: "#CCC",
     foreground: "#000",
     link: "#666",
     linkActive: "#444",
@@ -25,6 +27,7 @@ export const DarkTheme: Theme = {
     background: "#333",
     backgroundSidePanel: "#444",
     backgroundHorizontalPanel: "#222",
+    backgroundHighlight: "#666",
     foreground: "#FFF",
     link: "#BBB",
     linkActive: "#DDD",

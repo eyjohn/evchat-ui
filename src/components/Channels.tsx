@@ -1,24 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import ChannelComponent from "./Channel";
+import JoinChannel from "./JoinChannel";
+import ChannelManager from "../lib/channelManager";
+import Channel from "../types/channel";
 
-import Channel from "./Channel";
+const Styled = styled.div``;
 
-const Styled = styled.div`
-  padding: 10px;
-`;
+export type Props = {
+  channelManager: ChannelManager;
+};
 
-const Join = styled.input`
-  font-size: 1em;
-  /* width: 200px;
-  padding: 10px; */
-`;
+const Component: React.FC<Props> = ({ channelManager }) => {
+  let [channels, setChannels] = useState<Array<Channel>>(
+    channelManager.channels()
+  );
 
-const Component: React.FC = (props) => {
-  return <Styled>
-    <Channel></Channel>
-    <Channel></Channel>
-    <Join placeholder="Join Room"></Join>
-    <button>Foo</button>
-  </Styled>;
+  function onJoin(channelName: string) {
+    channelManager.join(channelName);
+    setChannels(channelManager.channels());
+  }
+
+  function onSwitch(channelName: string) {
+    channelManager.switch(channelName);
+    setChannels(channelManager.channels());
+  }
+
+  function onClose(channelName: string) {
+    channelManager.leave(channelName);
+    setChannels(channelManager.channels());
+  }
+  return (
+    <Styled>
+      {channels.map((channel, key) => (
+        <ChannelComponent
+          key={key}
+          name={channel.name}
+          active={channel.active}
+          onClick={onSwitch}
+          onClose={onClose}
+        ></ChannelComponent>
+      ))}
+      <JoinChannel onJoin={onJoin}></JoinChannel>
+    </Styled>
+  );
 };
 export default Component;
