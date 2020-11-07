@@ -1,7 +1,8 @@
 import React from "react";
 import DynamicNamedThemeProvider from "./DynamicNamedThemeProvider";
 import GlobalStyle from "./GlobalStyle";
-import "semantic-ui-css/semantic.min.css";
+// import "semantic-ui-css/semantic.min.css";
+import "./assets/semantic.cyborg.min.css";
 
 import Layout from "./components/Layout";
 import Header from "./components/Header";

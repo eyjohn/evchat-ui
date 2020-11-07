@@ -1,12 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import { Form, Button, Input } from "semantic-ui-react";
 
-const Styled = styled.div`
-  padding: 10px;
-  border-top: 1px solid ${({ theme }) => theme.colors.backgroundHorizontalPanel}; ;
-`;
 
 const Component: React.FC = (props) => {
-  return <Styled>MessageInput</Styled>;
+  return (
+
+      <Form>
+        <Input fluid action>
+          <input />
+          <Button icon="send"></Button>
+        </Input>
+      </Form>
+
+  );
 };
 export default Component;

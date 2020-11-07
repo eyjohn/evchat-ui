@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Styled = styled.div`
-  padding: 10px;
+  /* padding: 10px; */
   border-top: 1px solid ${({ theme }) => theme.colors.backgroundHorizontalPanel}; ;
 `;
 
