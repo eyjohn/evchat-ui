@@ -1,4 +1,10 @@
 import { createGlobalStyle } from "styled-components";
+import hexRgb from "hex-rgb";
+
+function applyAlpha(baseColor: string, alpha: number): string {
+  let baseRgb = hexRgb(baseColor, { format: "array" }).slice(0, 3);
+  return `rgba(${baseRgb[0]},${baseRgb[1]},${baseRgb[2]},${alpha})`;
+}
 
 export default createGlobalStyle`
 body {
@@ -21,4 +27,19 @@ a:hover {
   color: ${({ theme }) => theme.colors.linkActive};
   text-decoration: underline;
 }
+
+// Semantic UI overrides
+main .ui.comments .comment .author,
+main .ui.comments .comment .text {
+  color: ${({ theme }) => applyAlpha(theme.colors.foreground, 0.875)};
+}
+
+main .ui.comments .comment .metadata {
+  color: ${({ theme }) => applyAlpha(theme.colors.foreground, 0.75)};
+}
+
+main .ui.comments .comment .actions a {
+  color: ${({ theme }) => applyAlpha(theme.colors.foreground, 0.5)};
+}
+
 `;
